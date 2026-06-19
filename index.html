@@ -18,7 +18,20 @@ textarea{width:100%;height:100%;background:var(--bg);color:var(--tx);border:none
 .dropdown-menu{display:none;position:absolute;bottom:0;right:52px;background:#1a1a1a;border:1px solid var(--bd);border-radius:6px;min-width:180px;z-index:99999;padding:4px 0;box-shadow:-6px 6px 16px rgba(0,0,0,.6)}
 .dropdown-menu.show{display:block!important}.menu-item{padding:14px 16px;display:flex;align-items:center;gap:10px;cursor:pointer;font-size:15px;border-bottom:1px solid #252525;color:var(--tx);user-select:none}.menu-item:last-child{border-bottom:none}
 /* Компактный вертикальный счетчик в самом низу панели */
-.status-bar{position:absolute;top:8px;left:8;right:0;display:flex;flex-direction:column;align-items:center;font-size:11px;color:#666;gap:2px;text-align:center;user-select:none;line-height:1}
+.status-bar {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 11px;
+  color: #666;
+  gap: 2px;
+  text-align: left;
+  user-select: none;
+  line-height: 1;
+}
 #p-O,#p-U{display:none}@media(min-height:450px){#p-O{display:inline-flex}#m-O{display:none}}@media(min-height:600px){#p-U{display:inline-flex}#m-U,#m-R{display:none}}
 </style></head><body>
 <div class="container"><textarea id="ed" class="word-wrap" placeholder="Type here..."></textarea></div>
@@ -26,9 +39,9 @@ textarea{width:100%;height:100%;background:var(--bg);color:var(--tx);border:none
     <div class="toolbar-group g-multi"><button class="btn-main" id="bTL">⇤</button><div class="group-label">Tab</div><button class="btn-main" id="bTR">⇥</button></div>
     <div class="toolbar-group g-single" id="p-O"><button class="btn-main" id="bAO">Open</button></div>
     <div class="toolbar-group g-multi" id="p-U"><button class="btn-main" id="bU">↺</button><div class="group-divider"></div><button class="btn-main" id="bR">↻</button></div>
-    <div class="menu-container"><button class="btn-menu" id="b3">⋮</button><div class="dropdown-menu" id="dM">
     <div class="toolbar-group g-single"><button class="btn-main" id="bSA">All</button></div>
     <div class="toolbar-group g-single"><button class="btn-main" id="bS">💾</button></div>
+    <div class="menu-container"><button class="btn-menu" id="b3">⋮</button><div class="dropdown-menu" id="dM">
         <div class="menu-item" id="m-O">Open...</div><div class="menu-item" id="m-U">Undo</div><div class="menu-item" id="m-R">Redo</div><div class="menu-item" id="m-ZI">Zoom +</div><div class="menu-item" id="m-ZO">Zoom -</div>
         <label class="menu-item"><input type="checkbox" id="cW" checked style="margin-right:8px"> Word Wrap</label>
     </div></div>
